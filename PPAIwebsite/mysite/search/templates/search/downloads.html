@@ -1,0 +1,60 @@
+{% extends 'search/base.html' %}
+
+{%load static%}
+
+{% block title %}Downloads{% endblock title %}
+
+{% block body %}
+
+<div class="inner-wrap pt-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 mb-3">
+                <h2>Downloads</h2>
+            </div>            	
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Date</th>
+                  </tr>
+                </thead>
+                <tbody>				    
+                    <tr>
+                        <th scope="row">1</th>
+                        <td><a href="{% static 'media/img1.jpg'%}" download>download1</a></td>
+                        <td>time1</td>
+                    </tr>				    
+                    <tr>
+                        <th scope="row">2</th>
+                        <td><a href="{% static 'media/img1.jpg'%}" download>download2</a></td>
+                        <td>time1</td>
+                        </tr>				    
+                    <tr>
+                        <th scope="row">3</th>
+                        <td><a href="{% static 'media/img1.jpg'%}" download>download3</a></td>
+                        <td>time1</td>
+                    </tr>				    
+                    <tr>
+                        <th scope="row">4</th>
+                        <td><a href="{% static 'media/img1.jpg'%}" download>download4</a></td>
+                        <td>time1</td>
+                    </tr>				    
+                    <tr>
+                        <th scope="row">5</th>
+                        <td><a href="{% static 'media/img1.jpg'%}" download>download5</a></td>
+                        <td>time1</td>
+                    </tr>				    
+                    <tr>
+                        <th scope="row">6</th>
+                        <td><a href="{% static 'media/img1.jpg'%}" download>download6</a></td>
+                        <td>time1</td>
+                    </tr>	
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock body %}

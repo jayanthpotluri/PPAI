@@ -1,0 +1,281 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %} | PPAI</title>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+</head>
+<body>
+    <!-- new -->
+    <nav class="navbar0 navbar top-container">
+      <img src="{% static 'media/logo.png'%}" width="120" height="110" class="top-nav-ele" style="margin-left:39px" alt="">
+      <a href="#" class="nav-link top-nav-ele" style="margin-top:30px; margin-left:20px;">
+        <pre><b style="font-size:26px">Plant Protection Association of India</b>
+<p style="font-size:16px">(Regn. No. S399 of 1949-50 under the societies registration act xXI of 1860)</p></pre>
+      </a>
+        <div style="margin-left:400px" class="login">
+          <a class="nav-link login-ele " href="/login/">Login</a>
+          <a class="nav-link login-ele" style="background: #000000; color:#FFFFFF;border-radius:5px; width: 167px; height:32px;" href="/register/">Register</a>
+        </div>
+
+
+
+    {% comment %} <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="{% static 'media/logo.png'%}" width="120" height="110" class="d-inline align-left" alt="">
+      <span class=" d-inline  ">d-block</span>
+      <span class=" d-inline  ">d-block</span> 
+    </a>
+    <a class="nav-link" href="/login/">Login</a>
+      <a class="nav-link" href="/register/">Register</a> {% endcomment %}
+    </nav>
+    <!-- new -->
+    <nav class="navbar navbar1 navbar-expand-lg">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle navbar-elements text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  About Us
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">The Society</a></li>
+                  <li><a class="dropdown-item" href="#">The Executive Council</a></li>
+                  <li><a class="dropdown-item" href="#">The Legendary</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle navbar-elements text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Publications
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Journals</a></li>
+                  <li><a class="dropdown-item" href="#">Editorial Board</a></li>
+                  <li><a class="dropdown-item" href="#">Books</a></li>
+                  <li><a class="dropdown-item" href="#">Annual Report</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle navbar-elements text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Awards
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/awards">Awards of the society</a></li>
+                  <li><a class="dropdown-item" href="/awards">Awards Nomination</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle navbar-elements text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 Conferences
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/conferences">National</a></li>
+                  <li><a class="dropdown-item" href="/conferences">Workshop</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle navbar-elements text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Membership
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/membership">Membership Information</a></li>
+                  <li><a class="dropdown-item" href="/membership">Membership Directory</a></li>
+                  <li><a class="dropdown-item" href="/membership">Registration</a></li>
+                </ul>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link navbar-elements text-white" href="/downloads">Downloads</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link navbar-elements text-white" href="/downloads">Election</a>
+              </li>
+              
+              {% comment %} <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li> {% endcomment %}
+            </ul>
+            {% comment %} <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form> {% endcomment %}
+            
+
+          </div>
+        </div>
+      </nav>
+
+      {% block body %}{% endblock body %}
+
+      <!-- Footer -->
+<footer class="text-center text-lg-start bg-light text-muted">
+  <!-- Section: Social media -->
+  
+
+  <!-- Section: Links  -->
+  <section class="" style="  ">
+    <div class="container text-center text-lg-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class=" mx-auto mb-4 col-md">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            ABOUT US  
+          </h6>
+          <p>
+            <a href="#!" class="text-reset text-decoration-none footer-contents">The Society</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset text-decoration-none footer-contents">The Executive Council</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset text-decoration-none footer-contents">The Legendary</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class=" mx-auto mb-4 col-md">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            PUBLICATIONS
+          </h6>
+          <p>
+            <a href="#!" class="text-reset text-decoration-none footer-contents">Journals</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset text-decoration-none footer-contents">Editorial Board</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset text-decoration-none footer-contents">Books</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset text-decoration-none footer-contents">Annual Report</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class=" mx-auto mb-4 col-md">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            AWARDS
+          </h6>
+          <p>
+            <a href="/awards" class="text-reset text-decoration-none footer-contents">Awards of the society</a>
+          </p>
+          <p>
+            <a href="/awards" class="text-reset text-decoration-none footer-contents">Awards Nomination</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class=" mx-auto mb-4 col-md">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            CONFERENCES
+          </h6>
+          <p>
+            <a href="/conferences" class="text-reset text-decoration-none footer-contents">National</a>
+          </p>
+          <p>
+            <a href="/conferences" class="text-reset text-decoration-none footer-contents">Workshops</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class=" mx-auto mb-4 col-md">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            MEMBERSHIP
+          </h6>
+          <p>
+            <a href="#!" class="text-reset text-decoration-none footer-contents">Membership Info</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset text-decoration-none footer-contents">Membership Directory </a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset text-decoration-none footer-contents">Registration</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 col-md footer-contents">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <p>Dr. Kajal Kumar Biswas Secretary <br>Indian Phytopathological Society  Division of Plant Pathology IARI, New Delhi 110012, INDIA</p>
+          
+          <p>Mobile No. : 9868796694 </p>
+          <p>
+            ipsdis@yahoo.com
+          </p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4 bot-footer" style="background-color: rgba(0, 0, 0, 0.05);">
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+      <!-- Left -->
+      <div class="me-5 d-none d-lg-block">
+        <a href="#!" class="text-reset text-decoration-none">Feedback</a>
+        <a href="#!" class="text-reset text-decoration-none">Terms & Conditions</a>
+        <a href="#!" class="text-reset text-decoration-none">Privacy Policy</a>
+        <a href="#!" class="text-reset text-decoration-none">Refund Policy</a>
+      </div>
+      <!-- Left -->
+  
+      <!-- Right -->
+      <div>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <!-- Right -->
+      © 2023 Plant Protection Association of India. All rights reserved
+    </section>
+    <!-- Section: Social media -->
+    
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+    
+</body>
+</html>
